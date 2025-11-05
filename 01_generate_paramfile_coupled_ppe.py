@@ -18,10 +18,10 @@ parm_conf = ParameterFileConfig(
     chem_mech_file=None,
     ctsm_default_param_file=Path('/cluster/shared/noresm/inputdata/lnd/clm2/paramdata/ctsm60_params.250923_v26j.nc'),
     fates_default_param_file=Path('/cluster/shared/noresm/inputdata/lnd/clm2/paramdata/fates_params_api.40.0.0_14pft_c250923_noresm_v26i.nc'),
-    nmb_sim=3,
+    nmb_sim=50,
     avoid_scramble=False,
     exclude_default=False,
-    log_dir=Path('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/logs'),
+    log_dir=script_dir.joinpath('output_files', 'logs'),
     verbose=2
 )
 

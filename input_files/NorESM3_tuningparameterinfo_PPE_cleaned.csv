@@ -11,7 +11,7 @@ Ocean,7,BLOM,EGIDFQ,,Ratio neutral/thickness eddy diffusivity [-],,0.6,1.5,0.8,"
 Land,,CLM,d_max,CTSM,Maximum dry surface layer (DSL) thickness,,10.00,60.00,15.00,"2.0",linear,CTSM_param_file,,,"The dry surface layer is an insulating layer at the top of the soil, reducing evaporation","The DSL parameters are poorly constrained, but has a large effect on evaporation and temerature. ","https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GL108372
 https://doi.org/10.1002/2014JD022314"
 Land,,CLM,frac_sat_soil_dsl_init,CTSM,Fractional soil moist. at which DSL initiates,,0.5,"1.0",0.8,"2.0",linear,CTSM_param_file,d_max,,Large control over dryland ET ,The two soil layers ,
-Land,,CLM ,fates_leaf_stomatal_slope_medlyn,FATES,Slope of the stomatal conductance model. ,0.2,,,1,2.0,linear,FATES_param_file,d_max,,Primary control over plant evaporation ,,
+Land,,CLM ,fates_leaf_stomatal_slope_medlyn,FATES,Slope of the stomatal conductance model. ,0.2,,,1,2.0,linear,FATES_param_file,-d_max,,Primary control over plant evaporation ,,
 Land,,CLM,fates_mort_hf_sm_threshold,FATES,Soil moisture threshold for drought-induced plant mortality,0.2,,,1,2.0,linear,FATES_param_file,,,Including this as a potential lever on how much the amazon can tolrate low rainfall.,,
 Land,,CLM,fates_turb_z0mr,FATES,Roughness length scalar,0.2,,,1,2.0,linear,FATES_param_file,,,Possible impact on atmospheric coupling & precip. ,,
 Ice,,CICE,phi_i_mushy,,Freezing rate under ice,,0.25,0.95,0.85,"2.0",linear,user_nl,,,The standard value used in the model overestimate ice growth. One new value suggested in litterature (0.45),,
