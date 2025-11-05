@@ -21,7 +21,7 @@ parm_conf = ParameterFileConfig(
     nmb_sim=3,
     avoid_scramble=False,
     exclude_default=False,
-    log_dir=Path('/cluster/projects/nn9560k/johannef/NorESM_workdir/cases-test_tinkertool4coupled/run_scripts/output_files/logs'),
+    log_dir=Path('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/logs'),
     verbose=2
 )
 
@@ -38,7 +38,7 @@ print("\n", ds_string)
 
 visualize_paramfile(
     parm_conf.param_sample_outpath.with_suffix('.raw.nc'),
-    save_path=Path('/cluster/projects/nn9560k/johannef/NorESM_workdir/cases-test_tinkertool4coupled/run_scripts/output_files/figures/NorESM3_tuningparameterinfo_PPE_test_pairplot.png'),
+    save_path=Path('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/figures/NorESM3_tuningparameterinfo_PPE_test_pairplot.png'),
 )
 
 # %%
