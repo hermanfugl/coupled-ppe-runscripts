@@ -1,0 +1,35 @@
+2025-11-06 18:44:48 [INFO_DETAILED/Tinkertool_log] >> Generating with config: Instance of dataclass 'CheckedParameterFileConfig':
+  verbose              = 2 (<class 'int'>) | Increase verbosity level (0: WARNING, 1: INFO, 2: INFO_DETAILED, 3: DEBUG)
+  log_dir              = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/logs') (pathlib.Path | str) | Path to the log directory where logs will be written. If not specified, logs will be printed in current work directory.
+  log_mode             = 'w' (<class 'str'>) | Mode for opening the log file ('w' for write, 'a' for append)
+  log_file             = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/logs/tinkertool_20251106-184448.log') (<class 'pathlib.Path'>) | Log file path (set automatically)
+  param_ranges_inpath  = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/input_files/NorESM3_tuningparameterinfo_PPE.ini') (<class 'pathlib.Path'>) | Path to the parameter ranges file in .ini format
+  param_sample_outpath = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/input_files/NorESM3_tuningparameterinfo_PPE.nc') (<class 'pathlib.Path'>) | Path to the output parameter file with .nc extension
+  nmb_sim              = 5 (<class 'int'>) | Number of ensemble members.
+  chem_mech_file       = None (pathlib.Path | None) | Path to the chemistry mechanism file
+  ctsm_default_param_file = PosixPath('/cluster/shared/noresm/inputdata/lnd/clm2/paramdata/ctsm60_params.250923_v26j.nc') (pathlib.Path | None) | Path to the default CTSM parameter file in netCDF format
+  fates_default_param_file = PosixPath('/cluster/shared/noresm/inputdata/share_kjetil/Test_param_files/fates_params_sci.1.85.1_api.40.0.0_14pft_nor_sci1_api1TEST_c251105.nc') (pathlib.Path | None) | Path to the default FATES parameter file in netCDF format
+  tinkertool_output_dir = PosixPath('/cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output') (<class 'pathlib.Path'>) | Path to the output directory for files produced by TinkerTool
+  optimization         = None (str | None) | Whether to enable optimization after sampling
+  avoid_scramble       = False (<class 'bool'>) | Overwrite the default scramble of hypercube
+  params               = ['micro_mg_dcs', 'zmconv_c0_ocn', 'zmconv_tiedke_add', 'clubb_C8', 'CE', 'EGC', 'EGIDFQ', 'd_max', 'frac_sat_soil_dsl_init', 'fates_leaf_stomatal_slope_medlyn', 'fates_mort_hf_sm_threshold', 'fates_turb_z0mr', 'phi_i_mushy'] (<class 'list'>) | List of parameters to be sampled
+  exclude_default      = False (<class 'bool'>) | Whether to exclude the default parameter value in the output file
+  param_ranges         = <configparser.ConfigParser object at 0x7f0799bf3550> (<class 'configparser.ConfigParser'>) | Parsed parameter ranges file
+  nparams              = 13 (<class 'int'>) | Number of parameters to be sampled
+  scramble             = True (<class 'bool'>) | Whether to scramble the samples
+  nmb_sim_dim          = array([0, 1, 2, 3, 4, 5]) (<class 'numpy.ndarray'>) | Array of ensemble member indices
+  change_chem_mech     = False (<class 'bool'>) | Whether to change the chemistry mechanism file
+  change_ctsm_params   = True (<class 'bool'>) | Whether to change CTSM parameters
+  change_fates_params  = True (<class 'bool'>) | Whether to change FATES parameters
+2025-11-06 18:44:49 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/paramfile/paramfile_file_sim0.nc generated with changes: {'d_max': np.float64(15.0), 'frac_sat_soil_dsl_init': np.float64(0.8)}
+2025-11-06 18:44:50 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/paramfile/paramfile_file_sim1.nc generated with changes: {'d_max': np.float64(13.34), 'frac_sat_soil_dsl_init': np.float64(0.53)}
+2025-11-06 18:44:50 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/paramfile/paramfile_file_sim2.nc generated with changes: {'d_max': np.float64(32.62), 'frac_sat_soil_dsl_init': np.float64(0.73)}
+2025-11-06 18:44:50 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/paramfile/paramfile_file_sim3.nc generated with changes: {'d_max': np.float64(44.84), 'frac_sat_soil_dsl_init': np.float64(0.85)}
+2025-11-06 18:44:51 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/paramfile/paramfile_file_sim4.nc generated with changes: {'d_max': np.float64(29.22), 'frac_sat_soil_dsl_init': np.float64(0.69)}
+2025-11-06 18:44:51 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/paramfile/paramfile_file_sim5.nc generated with changes: {'d_max': np.float64(56.45), 'frac_sat_soil_dsl_init': np.float64(0.96)}
+2025-11-06 18:44:52 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/fates_paramfile/fates_paramfile_file_sim0.nc generated with changes: {'fates_leaf_stomatal_slope_medlyn': np.float64(1.0), 'fates_mort_hf_sm_threshold': np.float64(1.0), 'fates_turb_z0mr': np.float64(1.0)}
+2025-11-06 18:44:52 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/fates_paramfile/fates_paramfile_file_sim1.nc generated with changes: {'fates_leaf_stomatal_slope_medlyn': np.float64(1.17), 'fates_mort_hf_sm_threshold': np.float64(0.96), 'fates_turb_z0mr': np.float64(1.15)}
+2025-11-06 18:44:52 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/fates_paramfile/fates_paramfile_file_sim2.nc generated with changes: {'fates_leaf_stomatal_slope_medlyn': np.float64(1.02), 'fates_mort_hf_sm_threshold': np.float64(0.94), 'fates_turb_z0mr': np.float64(1.08)}
+2025-11-06 18:44:52 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/fates_paramfile/fates_paramfile_file_sim3.nc generated with changes: {'fates_leaf_stomatal_slope_medlyn': np.float64(0.92), 'fates_mort_hf_sm_threshold': np.float64(1.17), 'fates_turb_z0mr': np.float64(0.8)}
+2025-11-06 18:44:53 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/fates_paramfile/fates_paramfile_file_sim4.nc generated with changes: {'fates_leaf_stomatal_slope_medlyn': np.float64(1.05), 'fates_mort_hf_sm_threshold': np.float64(0.81), 'fates_turb_z0mr': np.float64(0.98)}
+2025-11-06 18:44:53 [INFO_DETAILED/Tinkertool_log] /cluster/projects/nn9560k/herfugl/NorESMTinkerTool/tinkertool/output/fates_paramfile/fates_paramfile_file_sim5.nc generated with changes: {'fates_leaf_stomatal_slope_medlyn': np.float64(0.83), 'fates_mort_hf_sm_threshold': np.float64(1.09), 'fates_turb_z0mr': np.float64(0.91)}
