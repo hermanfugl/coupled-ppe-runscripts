@@ -18,7 +18,7 @@ cases.sort(key=lambda x: x.name)
 check_build_config = CheckBuildConfig(
     cases       = cases,
     verbose     = 2,
-    log_dir     = Path(f'/cluster/projects/nn9560k/johannef/NorESM_workdir/cases-test_tinkertool4coupled/run_scripts/output_files/logs').resolve(),
+    log_dir     = script_dir.joinpath('output_files', 'logs').resolve(),
     log_mode    = 'w'
 )
 

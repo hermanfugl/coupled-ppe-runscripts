@@ -18,12 +18,12 @@ cases.sort(key=lambda x: x.name)
 prestage_ensemble_config = PrestageEnsembleConfig(
     cases       = cases,
     verbose     = 2,
-    log_dir     = Path(f'/cluster/projects/nn9560k/johannef/NorESM_workdir/cases-test_tinkertool4coupled/run_scripts/output_files/logs').resolve(),
+    log_dir     = script_dir.joinpath('output_files', 'logs').resolve(),
     log_mode    = 'w'
 )
 
 if prestage_ensemble(prestage_ensemble_config):
-    print("All cases are built correctly.")
+    print("All cases are prestaged correctly.")
 else:
-    print("Some cases are not built correctly. Please check the log file for details.")
+    print("Some cases are not prestaged correctly. Please check the log file for details.")
     sys.exit(1)

@@ -13,6 +13,6 @@ for case in cases_dir.iterdir():
 
 cases.sort(key=lambda x: x.name)
 
-change = {'RUN_REFDIR': '/cluster/work/users/herfugl/archive/n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106/rest/0351-04-01-00000'}
+change = {'RUN_REFDIR': '/cluster/projects/nn9560k/adagj/ppe_restfiles/'}
 
 bulk_xmlchange(cases, change)
