@@ -1,0 +1,21 @@
+2025-11-07 11:28:52 [INFO_DETAILED/Tinkertool_log] tinkertool_log logger set up
+2025-11-07 11:28:52 [INFO_DETAILED/Tinkertool_log] Building with config: Instance of dataclass 'BuildPPEConfig':
+  verbose              = 2 (<class 'int'>) | Increase verbosity level (0: WARNING, 1: INFO, 2: INFO_DETAILED, 3: DEBUG)
+  log_dir              = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/logs') (pathlib.Path | str) | Path to the log directory where logs will be written. If not specified, logs will be printed in current work directory.
+  log_mode             = 'w' (<class 'str'>) | Mode for opening the log file ('w' for write, 'a' for append)
+  simulation_setup_path = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/input_files/simulation_setup.ini') (<class 'pathlib.Path'>) | Path to user defined configuration file for simulation setup.
+  build_base_only      = False (<class 'bool'>) | Only build the base case - not PPE members
+  build_only           = None (<class 'NoneType'>) | Not used in BuildPPEConfig
+  clone_only_during_build = False (<class 'bool'>) | Only clone the base case and not build the PPE members. This is useful if you have already built the base_case.
+  keepexe              = False (<class 'bool'>) | Reuse the executable for the base case instead of building a new one for each member
+  overwrite            = True (<class 'bool'>) | Overwrite existing cases if they exist
+2025-11-07 11:28:52 [INFO/Tinkertool_log] >>> BUILDING BASE CASE...
+2025-11-07 11:28:52 [INFO/Tinkertool_log] Creating base case directory: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/base_case
+2025-11-07 11:28:56 [INFO/Tinkertool_log] >>> Setting environment parallel execution settings...
+2025-11-07 11:28:56 [INFO/Tinkertool_log] >>> base case_setup...
+2025-11-07 11:29:03 [INFO/Tinkertool_log] >>> Setting environment run settings...
+2025-11-07 11:29:03 [INFO/Tinkertool_log] >>> base case write user_nl files...
+2025-11-07 11:29:03 [INFO/Tinkertool_log] ...Writing to user_nl file: user_nl_cam
+2025-11-07 11:29:03 [INFO/Tinkertool_log] ...Writing to user_nl file: user_nl_clm
+2025-11-07 11:29:03 [INFO/Tinkertool_log] ...Writing to user_nl file: user_nl_blom
+2025-11-07 11:29:03 [INFO/Tinkertool_log] >> base case_build...

@@ -1,0 +1,715 @@
+2025-11-07 10:29:46 [INFO/ROOT] >> Starting PPE case building
+2025-11-07 10:29:49 [INFO/ROOT]  Successfully created new case ensemble_member.000 from clone case base_case 
+2025-11-07 10:29:54 [INFO/ROOT] Setting resource.RLIMIT_STACK to -1 from (8388608, -1)
+2025-11-07 10:29:55 [INFO/ROOT] job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+2025-11-07 10:29:55 [INFO/ROOT] Creating batch scripts
+2025-11-07 10:29:55 [INFO/ROOT] Writing case.run script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.case.run
+2025-11-07 10:29:55 [INFO/ROOT] Creating file .case.run
+2025-11-07 10:29:55 [INFO/ROOT] Writing case.st_archive script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.st_archive
+2025-11-07 10:29:55 [INFO/ROOT] Creating file case.st_archive
+2025-11-07 10:29:55 [INFO/ROOT] Writing case.compress script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.compress
+2025-11-07 10:29:55 [INFO/ROOT] Creating file case.compress
+2025-11-07 10:29:55 [INFO/ROOT] Writing case.cupid script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.cupid
+2025-11-07 10:29:55 [INFO/ROOT] Creating file case.cupid
+2025-11-07 10:29:55 [INFO/ROOT] Running cam.case_setup.py
+2025-11-07 10:29:56 [INFO/ROOT] If an old case build already exists, might want to run 'case.build --clean' before building
+2025-11-07 10:29:56 [INFO/ROOT] You can now run './preview_run' to get more info on how your case will be run
+2025-11-07 10:29:59 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:29:59 [INFO/ROOT]   2025-11-07 10:29:59 atm 
+2025-11-07 10:29:59 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:29:59 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:30:00 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.000/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.000/atm_in 
+2025-11-07 10:30:00 [INFO/ROOT]   2025-11-07 10:30:00 lnd 
+2025-11-07 10:30:00 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:30:00 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:30:00 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:30:01 [INFO/ROOT]   2025-11-07 10:30:01 ice 
+2025-11-07 10:30:01 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:30:01 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:30:01 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.000
+2025-11-07 10:30:02 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:30:02 [INFO/ROOT]   2025-11-07 10:30:02 ocn 
+2025-11-07 10:30:02 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:30:02 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:30:03 [INFO/ROOT]   2025-11-07 10:30:03 rof 
+2025-11-07 10:30:03 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:30:03 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:30:03 [INFO/ROOT]   2025-11-07 10:30:03 glc 
+2025-11-07 10:30:03 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:30:03 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:30:03 [INFO/ROOT]   2025-11-07 10:30:03 wav 
+2025-11-07 10:30:03 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:30:03 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:30:03 [INFO/ROOT]   2025-11-07 10:30:03 esp 
+2025-11-07 10:30:03 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:30:03 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:30:03 [INFO/ROOT]   2025-11-07 10:30:03 cpl 
+2025-11-07 10:30:03 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:30:03 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:30:03 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:30:05 [INFO/ROOT] Building case in directory /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.000
+2025-11-07 10:30:05 [INFO/ROOT] sharedlib_only is False
+2025-11-07 10:30:05 [INFO/ROOT] model_only is False
+2025-11-07 10:30:05 [INFO/ROOT] Generating component namelists as part of build
+2025-11-07 10:30:05 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:30:05 [INFO/ROOT]   2025-11-07 10:30:05 atm 
+2025-11-07 10:30:05 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:30:05 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:30:05 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.000/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.000/atm_in 
+2025-11-07 10:30:05 [INFO/ROOT]   2025-11-07 10:30:05 lnd 
+2025-11-07 10:30:05 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:30:05 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:30:05 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:30:05 [INFO/ROOT]   2025-11-07 10:30:05 ice 
+2025-11-07 10:30:05 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:30:05 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:30:05 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.000
+2025-11-07 10:30:05 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:30:05 [INFO/ROOT]   2025-11-07 10:30:05 ocn 
+2025-11-07 10:30:05 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:30:05 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:30:06 [INFO/ROOT]   2025-11-07 10:30:06 rof 
+2025-11-07 10:30:06 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:30:06 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:30:06 [INFO/ROOT]   2025-11-07 10:30:06 glc 
+2025-11-07 10:30:06 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:30:06 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:30:06 [INFO/ROOT]   2025-11-07 10:30:06 wav 
+2025-11-07 10:30:06 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:30:06 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:30:06 [INFO/ROOT]   2025-11-07 10:30:06 esp 
+2025-11-07 10:30:06 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:30:06 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:30:06 [INFO/ROOT]   2025-11-07 10:30:06 cpl 
+2025-11-07 10:30:06 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:30:06 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:30:06 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:30:09 [INFO/ROOT] Building gptl with output to file /cluster/work/users/herfugl/noresm/base_case/bld/gptl.bldlog.251107-103005
+2025-11-07 10:30:09 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.gptl
+2025-11-07 10:30:09 [INFO/ROOT] Building pio with output to file /cluster/work/users/herfugl/noresm/base_case/bld/pio.bldlog.251107-103005
+2025-11-07 10:30:09 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.pio
+2025-11-07 10:30:09 [INFO/ROOT] Building csm_share with output to file /cluster/work/users/herfugl/noresm/base_case/bld/csm_share.bldlog.251107-103005
+2025-11-07 10:30:09 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../share/buildlib.csm_share
+2025-11-07 10:30:11 [INFO/ROOT] Building CDEPS with output to file /cluster/work/users/herfugl/noresm/base_case/bld/CDEPS.bldlog.251107-103005
+2025-11-07 10:30:11 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/cime_config/buildlib
+2025-11-07 10:30:15 [INFO/ROOT]          - Building clm library 
+2025-11-07 10:30:15 [INFO/ROOT] Building lnd with output to /cluster/work/users/herfugl/noresm/base_case/bld/lnd.bldlog.251107-103005
+2025-11-07 10:30:17 [INFO/ROOT] clm built in 2.190603 seconds
+2025-11-07 10:30:17 [INFO/ROOT]          - Building atm Library 
+2025-11-07 10:30:17 [INFO/ROOT] Building atm with output to /cluster/work/users/herfugl/noresm/base_case/bld/atm.bldlog.251107-103005
+2025-11-07 10:30:17 [INFO/ROOT]          - Building ice Library 
+2025-11-07 10:30:17 [INFO/ROOT] Building ice with output to /cluster/work/users/herfugl/noresm/base_case/bld/ice.bldlog.251107-103005
+2025-11-07 10:30:17 [INFO/ROOT]          - Building ocn Library 
+2025-11-07 10:30:17 [INFO/ROOT] Building ocn with output to /cluster/work/users/herfugl/noresm/base_case/bld/ocn.bldlog.251107-103005
+2025-11-07 10:30:17 [INFO/ROOT]          - Building rof Library 
+2025-11-07 10:30:17 [INFO/ROOT] Building rof with output to /cluster/work/users/herfugl/noresm/base_case/bld/rof.bldlog.251107-103005
+2025-11-07 10:30:17 [INFO/ROOT]          - Building glc Library 
+2025-11-07 10:30:17 [INFO/ROOT] Building glc with output to /cluster/work/users/herfugl/noresm/base_case/bld/glc.bldlog.251107-103005
+2025-11-07 10:30:19 [INFO/ROOT] dglc built in 1.748802 seconds
+2025-11-07 10:30:19 [INFO/ROOT] mosart built in 1.888158 seconds
+2025-11-07 10:30:19 [INFO/ROOT] cice built in 2.098302 seconds
+2025-11-07 10:30:21 [INFO/ROOT] blom built in 4.331342 seconds
+2025-11-07 10:30:40 [INFO/ROOT] cam built in 22.640651 seconds
+2025-11-07 10:30:40 [INFO/ROOT] Building cesm from /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildexe with output to /cluster/work/users/herfugl/noresm/base_case/bld/cesm.bldlog.251107-103005 
+2025-11-07 10:31:11 [INFO/ROOT] Total build time: 66.471873 seconds
+2025-11-07 10:31:11 [INFO/ROOT] MODEL BUILD HAS FINISHED SUCCESSFULLY
+2025-11-07 10:31:11 [INFO/ROOT] >> Ensemble 0 of 5 created successfully.
+2025-11-07 10:31:13 [INFO/ROOT]  Successfully created new case ensemble_member.001 from clone case base_case 
+2025-11-07 10:31:18 [INFO/ROOT] Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+2025-11-07 10:31:18 [INFO/ROOT] job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+2025-11-07 10:31:18 [INFO/ROOT] Creating batch scripts
+2025-11-07 10:31:18 [INFO/ROOT] Writing case.run script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.case.run
+2025-11-07 10:31:18 [INFO/ROOT] Creating file .case.run
+2025-11-07 10:31:18 [INFO/ROOT] Writing case.st_archive script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.st_archive
+2025-11-07 10:31:18 [INFO/ROOT] Creating file case.st_archive
+2025-11-07 10:31:18 [INFO/ROOT] Writing case.compress script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.compress
+2025-11-07 10:31:18 [INFO/ROOT] Creating file case.compress
+2025-11-07 10:31:18 [INFO/ROOT] Writing case.cupid script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.cupid
+2025-11-07 10:31:18 [INFO/ROOT] Creating file case.cupid
+2025-11-07 10:31:18 [INFO/ROOT] Running cam.case_setup.py
+2025-11-07 10:31:19 [INFO/ROOT] If an old case build already exists, might want to run 'case.build --clean' before building
+2025-11-07 10:31:20 [INFO/ROOT] You can now run './preview_run' to get more info on how your case will be run
+2025-11-07 10:31:22 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:31:22 [INFO/ROOT]   2025-11-07 10:31:22 atm 
+2025-11-07 10:31:22 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:31:23 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:31:23 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.001/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.001/atm_in 
+2025-11-07 10:31:23 [INFO/ROOT]   2025-11-07 10:31:23 lnd 
+2025-11-07 10:31:23 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:31:23 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:31:23 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:31:24 [INFO/ROOT]   2025-11-07 10:31:24 ice 
+2025-11-07 10:31:24 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.001
+2025-11-07 10:31:25 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:31:25 [INFO/ROOT]   2025-11-07 10:31:25 ocn 
+2025-11-07 10:31:25 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT]   2025-11-07 10:31:25 rof 
+2025-11-07 10:31:25 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT]   2025-11-07 10:31:25 glc 
+2025-11-07 10:31:25 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT]   2025-11-07 10:31:25 wav 
+2025-11-07 10:31:25 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT]   2025-11-07 10:31:25 esp 
+2025-11-07 10:31:25 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT]   2025-11-07 10:31:25 cpl 
+2025-11-07 10:31:25 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:31:25 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:31:25 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:31:26 [INFO/ROOT] Building case in directory /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.001
+2025-11-07 10:31:26 [INFO/ROOT] sharedlib_only is False
+2025-11-07 10:31:26 [INFO/ROOT] model_only is False
+2025-11-07 10:31:26 [INFO/ROOT] Generating component namelists as part of build
+2025-11-07 10:31:26 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:31:26 [INFO/ROOT]   2025-11-07 10:31:26 atm 
+2025-11-07 10:31:26 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:31:26 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:31:27 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.001/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.001/atm_in 
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 lnd 
+2025-11-07 10:31:27 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:31:27 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:31:27 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 ice 
+2025-11-07 10:31:27 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:31:27 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:31:27 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.001
+2025-11-07 10:31:27 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 ocn 
+2025-11-07 10:31:27 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:31:27 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 rof 
+2025-11-07 10:31:27 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:31:27 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 glc 
+2025-11-07 10:31:27 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:31:27 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 wav 
+2025-11-07 10:31:27 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:31:27 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:31:27 [INFO/ROOT]   2025-11-07 10:31:27 esp 
+2025-11-07 10:31:28 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:31:28 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:31:28 [INFO/ROOT]   2025-11-07 10:31:28 cpl 
+2025-11-07 10:31:28 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:31:28 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:31:28 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:31:30 [INFO/ROOT] Building gptl with output to file /cluster/work/users/herfugl/noresm/base_case/bld/gptl.bldlog.251107-103126
+2025-11-07 10:31:30 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.gptl
+2025-11-07 10:31:31 [INFO/ROOT] Building pio with output to file /cluster/work/users/herfugl/noresm/base_case/bld/pio.bldlog.251107-103126
+2025-11-07 10:31:31 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.pio
+2025-11-07 10:31:31 [INFO/ROOT] Building csm_share with output to file /cluster/work/users/herfugl/noresm/base_case/bld/csm_share.bldlog.251107-103126
+2025-11-07 10:31:31 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../share/buildlib.csm_share
+2025-11-07 10:31:32 [INFO/ROOT] Building CDEPS with output to file /cluster/work/users/herfugl/noresm/base_case/bld/CDEPS.bldlog.251107-103126
+2025-11-07 10:31:32 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/cime_config/buildlib
+2025-11-07 10:31:36 [INFO/ROOT]          - Building clm library 
+2025-11-07 10:31:36 [INFO/ROOT] Building lnd with output to /cluster/work/users/herfugl/noresm/base_case/bld/lnd.bldlog.251107-103126
+2025-11-07 10:31:37 [INFO/ROOT] clm built in 1.768913 seconds
+2025-11-07 10:31:37 [INFO/ROOT]          - Building atm Library 
+2025-11-07 10:31:37 [INFO/ROOT] Building atm with output to /cluster/work/users/herfugl/noresm/base_case/bld/atm.bldlog.251107-103126
+2025-11-07 10:31:37 [INFO/ROOT]          - Building ice Library 
+2025-11-07 10:31:37 [INFO/ROOT] Building ice with output to /cluster/work/users/herfugl/noresm/base_case/bld/ice.bldlog.251107-103126
+2025-11-07 10:31:37 [INFO/ROOT]          - Building ocn Library 
+2025-11-07 10:31:37 [INFO/ROOT] Building ocn with output to /cluster/work/users/herfugl/noresm/base_case/bld/ocn.bldlog.251107-103126
+2025-11-07 10:31:37 [INFO/ROOT]          - Building rof Library 
+2025-11-07 10:31:37 [INFO/ROOT] Building rof with output to /cluster/work/users/herfugl/noresm/base_case/bld/rof.bldlog.251107-103126
+2025-11-07 10:31:37 [INFO/ROOT]          - Building glc Library 
+2025-11-07 10:31:37 [INFO/ROOT] Building glc with output to /cluster/work/users/herfugl/noresm/base_case/bld/glc.bldlog.251107-103126
+2025-11-07 10:31:39 [INFO/ROOT] dglc built in 1.752621 seconds
+2025-11-07 10:31:39 [INFO/ROOT] cice built in 1.799045 seconds
+2025-11-07 10:31:39 [INFO/ROOT] mosart built in 1.998801 seconds
+2025-11-07 10:31:42 [INFO/ROOT] blom built in 4.168859 seconds
+2025-11-07 10:31:57 [INFO/ROOT] cam built in 19.708567 seconds
+2025-11-07 10:31:57 [INFO/ROOT] Building cesm from /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildexe with output to /cluster/work/users/herfugl/noresm/base_case/bld/cesm.bldlog.251107-103126 
+2025-11-07 10:32:25 [INFO/ROOT] Total build time: 58.289805 seconds
+2025-11-07 10:32:25 [INFO/ROOT] MODEL BUILD HAS FINISHED SUCCESSFULLY
+2025-11-07 10:32:25 [INFO/ROOT] >> Ensemble 1 of 5 created successfully.
+2025-11-07 10:32:27 [INFO/ROOT]  Successfully created new case ensemble_member.002 from clone case base_case 
+2025-11-07 10:32:31 [INFO/ROOT] Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+2025-11-07 10:32:31 [INFO/ROOT] job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+2025-11-07 10:32:31 [INFO/ROOT] Creating batch scripts
+2025-11-07 10:32:31 [INFO/ROOT] Writing case.run script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.case.run
+2025-11-07 10:32:31 [INFO/ROOT] Creating file .case.run
+2025-11-07 10:32:31 [INFO/ROOT] Writing case.st_archive script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.st_archive
+2025-11-07 10:32:31 [INFO/ROOT] Creating file case.st_archive
+2025-11-07 10:32:31 [INFO/ROOT] Writing case.compress script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.compress
+2025-11-07 10:32:31 [INFO/ROOT] Creating file case.compress
+2025-11-07 10:32:31 [INFO/ROOT] Writing case.cupid script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.cupid
+2025-11-07 10:32:31 [INFO/ROOT] Creating file case.cupid
+2025-11-07 10:32:32 [INFO/ROOT] Running cam.case_setup.py
+2025-11-07 10:32:33 [INFO/ROOT] If an old case build already exists, might want to run 'case.build --clean' before building
+2025-11-07 10:32:34 [INFO/ROOT] You can now run './preview_run' to get more info on how your case will be run
+2025-11-07 10:32:37 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:32:37 [INFO/ROOT]   2025-11-07 10:32:37 atm 
+2025-11-07 10:32:37 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:32:37 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:32:37 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.002/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.002/atm_in 
+2025-11-07 10:32:37 [INFO/ROOT]   2025-11-07 10:32:37 lnd 
+2025-11-07 10:32:37 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:32:37 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:32:37 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:32:38 [INFO/ROOT]   2025-11-07 10:32:38 ice 
+2025-11-07 10:32:38 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:32:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:32:38 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.002
+2025-11-07 10:32:38 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:32:38 [INFO/ROOT]   2025-11-07 10:32:38 ocn 
+2025-11-07 10:32:38 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:32:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:32:39 [INFO/ROOT]   2025-11-07 10:32:39 rof 
+2025-11-07 10:32:39 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:32:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:32:39 [INFO/ROOT]   2025-11-07 10:32:39 glc 
+2025-11-07 10:32:39 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:32:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:32:39 [INFO/ROOT]   2025-11-07 10:32:39 wav 
+2025-11-07 10:32:39 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:32:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:32:39 [INFO/ROOT]   2025-11-07 10:32:39 esp 
+2025-11-07 10:32:39 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:32:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:32:39 [INFO/ROOT]   2025-11-07 10:32:39 cpl 
+2025-11-07 10:32:39 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:32:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:32:39 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:32:40 [INFO/ROOT] Building case in directory /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.002
+2025-11-07 10:32:40 [INFO/ROOT] sharedlib_only is False
+2025-11-07 10:32:40 [INFO/ROOT] model_only is False
+2025-11-07 10:32:40 [INFO/ROOT] Generating component namelists as part of build
+2025-11-07 10:32:40 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:32:40 [INFO/ROOT]   2025-11-07 10:32:40 atm 
+2025-11-07 10:32:40 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:32:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:32:40 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.002/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.002/atm_in 
+2025-11-07 10:32:40 [INFO/ROOT]   2025-11-07 10:32:40 lnd 
+2025-11-07 10:32:40 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:32:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:32:40 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 ice 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.002
+2025-11-07 10:32:41 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 ocn 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 rof 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 glc 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 wav 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 esp 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT]   2025-11-07 10:32:41 cpl 
+2025-11-07 10:32:41 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:32:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:32:41 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:32:47 [INFO/ROOT] Building gptl with output to file /cluster/work/users/herfugl/noresm/base_case/bld/gptl.bldlog.251107-103240
+2025-11-07 10:32:47 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.gptl
+2025-11-07 10:32:47 [INFO/ROOT] Building pio with output to file /cluster/work/users/herfugl/noresm/base_case/bld/pio.bldlog.251107-103240
+2025-11-07 10:32:47 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.pio
+2025-11-07 10:32:47 [INFO/ROOT] Building csm_share with output to file /cluster/work/users/herfugl/noresm/base_case/bld/csm_share.bldlog.251107-103240
+2025-11-07 10:32:47 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../share/buildlib.csm_share
+2025-11-07 10:32:49 [INFO/ROOT] Building CDEPS with output to file /cluster/work/users/herfugl/noresm/base_case/bld/CDEPS.bldlog.251107-103240
+2025-11-07 10:32:49 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/cime_config/buildlib
+2025-11-07 10:32:52 [INFO/ROOT]          - Building clm library 
+2025-11-07 10:32:52 [INFO/ROOT] Building lnd with output to /cluster/work/users/herfugl/noresm/base_case/bld/lnd.bldlog.251107-103240
+2025-11-07 10:32:54 [INFO/ROOT] clm built in 1.375112 seconds
+2025-11-07 10:32:54 [INFO/ROOT]          - Building atm Library 
+2025-11-07 10:32:54 [INFO/ROOT] Building atm with output to /cluster/work/users/herfugl/noresm/base_case/bld/atm.bldlog.251107-103240
+2025-11-07 10:32:54 [INFO/ROOT]          - Building ice Library 
+2025-11-07 10:32:54 [INFO/ROOT] Building ice with output to /cluster/work/users/herfugl/noresm/base_case/bld/ice.bldlog.251107-103240
+2025-11-07 10:32:54 [INFO/ROOT]          - Building ocn Library 
+2025-11-07 10:32:54 [INFO/ROOT] Building ocn with output to /cluster/work/users/herfugl/noresm/base_case/bld/ocn.bldlog.251107-103240
+2025-11-07 10:32:54 [INFO/ROOT]          - Building rof Library 
+2025-11-07 10:32:54 [INFO/ROOT] Building rof with output to /cluster/work/users/herfugl/noresm/base_case/bld/rof.bldlog.251107-103240
+2025-11-07 10:32:54 [INFO/ROOT]          - Building glc Library 
+2025-11-07 10:32:54 [INFO/ROOT] Building glc with output to /cluster/work/users/herfugl/noresm/base_case/bld/glc.bldlog.251107-103240
+2025-11-07 10:32:56 [INFO/ROOT] dglc built in 1.683601 seconds
+2025-11-07 10:32:56 [INFO/ROOT] mosart built in 1.858027 seconds
+2025-11-07 10:32:56 [INFO/ROOT] cice built in 1.859713 seconds
+2025-11-07 10:32:58 [INFO/ROOT] blom built in 3.684259 seconds
+2025-11-07 10:33:05 [INFO/ROOT] cam built in 11.617994 seconds
+2025-11-07 10:33:05 [INFO/ROOT] Building cesm from /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildexe with output to /cluster/work/users/herfugl/noresm/base_case/bld/cesm.bldlog.251107-103240 
+2025-11-07 10:33:28 [INFO/ROOT] Total build time: 47.799498 seconds
+2025-11-07 10:33:28 [INFO/ROOT] MODEL BUILD HAS FINISHED SUCCESSFULLY
+2025-11-07 10:33:28 [INFO/ROOT] >> Ensemble 2 of 5 created successfully.
+2025-11-07 10:33:29 [INFO/ROOT]  Successfully created new case ensemble_member.003 from clone case base_case 
+2025-11-07 10:33:33 [INFO/ROOT] Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+2025-11-07 10:33:33 [INFO/ROOT] job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+2025-11-07 10:33:33 [INFO/ROOT] Creating batch scripts
+2025-11-07 10:33:33 [INFO/ROOT] Writing case.run script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.case.run
+2025-11-07 10:33:33 [INFO/ROOT] Creating file .case.run
+2025-11-07 10:33:33 [INFO/ROOT] Writing case.st_archive script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.st_archive
+2025-11-07 10:33:33 [INFO/ROOT] Creating file case.st_archive
+2025-11-07 10:33:33 [INFO/ROOT] Writing case.compress script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.compress
+2025-11-07 10:33:33 [INFO/ROOT] Creating file case.compress
+2025-11-07 10:33:33 [INFO/ROOT] Writing case.cupid script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.cupid
+2025-11-07 10:33:33 [INFO/ROOT] Creating file case.cupid
+2025-11-07 10:33:33 [INFO/ROOT] Running cam.case_setup.py
+2025-11-07 10:33:34 [INFO/ROOT] If an old case build already exists, might want to run 'case.build --clean' before building
+2025-11-07 10:33:34 [INFO/ROOT] You can now run './preview_run' to get more info on how your case will be run
+2025-11-07 10:33:37 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:33:37 [INFO/ROOT]   2025-11-07 10:33:37 atm 
+2025-11-07 10:33:37 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:33:37 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:33:38 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.003/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.003/atm_in 
+2025-11-07 10:33:38 [INFO/ROOT]   2025-11-07 10:33:38 lnd 
+2025-11-07 10:33:38 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:33:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:33:38 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:33:38 [INFO/ROOT]   2025-11-07 10:33:38 ice 
+2025-11-07 10:33:38 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:33:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:33:38 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.003
+2025-11-07 10:33:38 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:33:39 [INFO/ROOT]   2025-11-07 10:33:39 ocn 
+2025-11-07 10:33:39 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:33:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:33:39 [INFO/ROOT]   2025-11-07 10:33:39 rof 
+2025-11-07 10:33:39 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:33:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:33:39 [INFO/ROOT]   2025-11-07 10:33:39 glc 
+2025-11-07 10:33:39 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:33:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:33:39 [INFO/ROOT]   2025-11-07 10:33:39 wav 
+2025-11-07 10:33:39 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:33:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:33:39 [INFO/ROOT]   2025-11-07 10:33:39 esp 
+2025-11-07 10:33:39 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:33:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:33:39 [INFO/ROOT]   2025-11-07 10:33:39 cpl 
+2025-11-07 10:33:39 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:33:39 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:33:39 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:33:40 [INFO/ROOT] Building case in directory /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.003
+2025-11-07 10:33:40 [INFO/ROOT] sharedlib_only is False
+2025-11-07 10:33:40 [INFO/ROOT] model_only is False
+2025-11-07 10:33:40 [INFO/ROOT] Generating component namelists as part of build
+2025-11-07 10:33:40 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:33:40 [INFO/ROOT]   2025-11-07 10:33:40 atm 
+2025-11-07 10:33:40 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:33:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:33:40 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.003/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.003/atm_in 
+2025-11-07 10:33:40 [INFO/ROOT]   2025-11-07 10:33:40 lnd 
+2025-11-07 10:33:40 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:33:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:33:40 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 ice 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.003
+2025-11-07 10:33:41 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 ocn 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 rof 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 glc 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 wav 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 esp 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT]   2025-11-07 10:33:41 cpl 
+2025-11-07 10:33:41 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:33:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:33:41 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:33:44 [INFO/ROOT] Building gptl with output to file /cluster/work/users/herfugl/noresm/base_case/bld/gptl.bldlog.251107-103340
+2025-11-07 10:33:44 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.gptl
+2025-11-07 10:33:44 [INFO/ROOT] Building pio with output to file /cluster/work/users/herfugl/noresm/base_case/bld/pio.bldlog.251107-103340
+2025-11-07 10:33:44 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.pio
+2025-11-07 10:33:44 [INFO/ROOT] Building csm_share with output to file /cluster/work/users/herfugl/noresm/base_case/bld/csm_share.bldlog.251107-103340
+2025-11-07 10:33:44 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../share/buildlib.csm_share
+2025-11-07 10:33:46 [INFO/ROOT] Building CDEPS with output to file /cluster/work/users/herfugl/noresm/base_case/bld/CDEPS.bldlog.251107-103340
+2025-11-07 10:33:46 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/cime_config/buildlib
+2025-11-07 10:33:48 [INFO/ROOT]          - Building clm library 
+2025-11-07 10:33:48 [INFO/ROOT] Building lnd with output to /cluster/work/users/herfugl/noresm/base_case/bld/lnd.bldlog.251107-103340
+2025-11-07 10:33:50 [INFO/ROOT] clm built in 1.541296 seconds
+2025-11-07 10:33:50 [INFO/ROOT]          - Building atm Library 
+2025-11-07 10:33:50 [INFO/ROOT] Building atm with output to /cluster/work/users/herfugl/noresm/base_case/bld/atm.bldlog.251107-103340
+2025-11-07 10:33:50 [INFO/ROOT]          - Building ice Library 
+2025-11-07 10:33:50 [INFO/ROOT] Building ice with output to /cluster/work/users/herfugl/noresm/base_case/bld/ice.bldlog.251107-103340
+2025-11-07 10:33:50 [INFO/ROOT]          - Building ocn Library 
+2025-11-07 10:33:50 [INFO/ROOT] Building ocn with output to /cluster/work/users/herfugl/noresm/base_case/bld/ocn.bldlog.251107-103340
+2025-11-07 10:33:50 [INFO/ROOT]          - Building rof Library 
+2025-11-07 10:33:50 [INFO/ROOT] Building rof with output to /cluster/work/users/herfugl/noresm/base_case/bld/rof.bldlog.251107-103340
+2025-11-07 10:33:50 [INFO/ROOT]          - Building glc Library 
+2025-11-07 10:33:50 [INFO/ROOT] Building glc with output to /cluster/work/users/herfugl/noresm/base_case/bld/glc.bldlog.251107-103340
+2025-11-07 10:33:52 [INFO/ROOT] dglc built in 1.730807 seconds
+2025-11-07 10:33:52 [INFO/ROOT] cice built in 1.866711 seconds
+2025-11-07 10:33:52 [INFO/ROOT] mosart built in 1.892337 seconds
+2025-11-07 10:33:54 [INFO/ROOT] blom built in 3.649999 seconds
+2025-11-07 10:34:03 [INFO/ROOT] cam built in 13.251622 seconds
+2025-11-07 10:34:03 [INFO/ROOT] Building cesm from /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildexe with output to /cluster/work/users/herfugl/noresm/base_case/bld/cesm.bldlog.251107-103340 
+2025-11-07 10:34:27 [INFO/ROOT] Total build time: 46.609803 seconds
+2025-11-07 10:34:27 [INFO/ROOT] MODEL BUILD HAS FINISHED SUCCESSFULLY
+2025-11-07 10:34:27 [INFO/ROOT] >> Ensemble 3 of 5 created successfully.
+2025-11-07 10:34:28 [INFO/ROOT]  Successfully created new case ensemble_member.004 from clone case base_case 
+2025-11-07 10:34:32 [INFO/ROOT] Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+2025-11-07 10:34:33 [INFO/ROOT] job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+2025-11-07 10:34:33 [INFO/ROOT] Creating batch scripts
+2025-11-07 10:34:33 [INFO/ROOT] Writing case.run script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.case.run
+2025-11-07 10:34:33 [INFO/ROOT] Creating file .case.run
+2025-11-07 10:34:33 [INFO/ROOT] Writing case.st_archive script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.st_archive
+2025-11-07 10:34:33 [INFO/ROOT] Creating file case.st_archive
+2025-11-07 10:34:33 [INFO/ROOT] Writing case.compress script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.compress
+2025-11-07 10:34:33 [INFO/ROOT] Creating file case.compress
+2025-11-07 10:34:33 [INFO/ROOT] Writing case.cupid script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.cupid
+2025-11-07 10:34:33 [INFO/ROOT] Creating file case.cupid
+2025-11-07 10:34:33 [INFO/ROOT] Running cam.case_setup.py
+2025-11-07 10:34:33 [INFO/ROOT] If an old case build already exists, might want to run 'case.build --clean' before building
+2025-11-07 10:34:34 [INFO/ROOT] You can now run './preview_run' to get more info on how your case will be run
+2025-11-07 10:34:36 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:34:36 [INFO/ROOT]   2025-11-07 10:34:36 atm 
+2025-11-07 10:34:36 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:34:36 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:34:37 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.004/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.004/atm_in 
+2025-11-07 10:34:37 [INFO/ROOT]   2025-11-07 10:34:37 lnd 
+2025-11-07 10:34:37 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:34:37 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:34:37 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:34:37 [INFO/ROOT]   2025-11-07 10:34:37 ice 
+2025-11-07 10:34:37 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:34:38 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.004
+2025-11-07 10:34:38 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:34:38 [INFO/ROOT]   2025-11-07 10:34:38 ocn 
+2025-11-07 10:34:38 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:34:38 [INFO/ROOT]   2025-11-07 10:34:38 rof 
+2025-11-07 10:34:38 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:34:38 [INFO/ROOT]   2025-11-07 10:34:38 glc 
+2025-11-07 10:34:38 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:34:38 [INFO/ROOT]   2025-11-07 10:34:38 wav 
+2025-11-07 10:34:38 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:34:38 [INFO/ROOT]   2025-11-07 10:34:38 esp 
+2025-11-07 10:34:38 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:34:38 [INFO/ROOT]   2025-11-07 10:34:38 cpl 
+2025-11-07 10:34:38 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:34:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:34:39 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:34:40 [INFO/ROOT] Building case in directory /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.004
+2025-11-07 10:34:40 [INFO/ROOT] sharedlib_only is False
+2025-11-07 10:34:40 [INFO/ROOT] model_only is False
+2025-11-07 10:34:40 [INFO/ROOT] Generating component namelists as part of build
+2025-11-07 10:34:40 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:34:40 [INFO/ROOT]   2025-11-07 10:34:40 atm 
+2025-11-07 10:34:40 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:34:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:34:40 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.004/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.004/atm_in 
+2025-11-07 10:34:40 [INFO/ROOT]   2025-11-07 10:34:40 lnd 
+2025-11-07 10:34:40 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:34:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:34:40 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:34:40 [INFO/ROOT]   2025-11-07 10:34:40 ice 
+2025-11-07 10:34:40 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:34:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:34:40 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.004
+2025-11-07 10:34:40 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:34:40 [INFO/ROOT]   2025-11-07 10:34:40 ocn 
+2025-11-07 10:34:40 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:34:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:34:41 [INFO/ROOT]   2025-11-07 10:34:41 rof 
+2025-11-07 10:34:41 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:34:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:34:41 [INFO/ROOT]   2025-11-07 10:34:41 glc 
+2025-11-07 10:34:41 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:34:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:34:41 [INFO/ROOT]   2025-11-07 10:34:41 wav 
+2025-11-07 10:34:41 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:34:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:34:41 [INFO/ROOT]   2025-11-07 10:34:41 esp 
+2025-11-07 10:34:41 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:34:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:34:41 [INFO/ROOT]   2025-11-07 10:34:41 cpl 
+2025-11-07 10:34:41 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:34:41 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:34:41 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:34:44 [INFO/ROOT] Building gptl with output to file /cluster/work/users/herfugl/noresm/base_case/bld/gptl.bldlog.251107-103440
+2025-11-07 10:34:44 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.gptl
+2025-11-07 10:34:44 [INFO/ROOT] Building pio with output to file /cluster/work/users/herfugl/noresm/base_case/bld/pio.bldlog.251107-103440
+2025-11-07 10:34:44 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.pio
+2025-11-07 10:34:44 [INFO/ROOT] Building csm_share with output to file /cluster/work/users/herfugl/noresm/base_case/bld/csm_share.bldlog.251107-103440
+2025-11-07 10:34:44 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../share/buildlib.csm_share
+2025-11-07 10:34:46 [INFO/ROOT] Building CDEPS with output to file /cluster/work/users/herfugl/noresm/base_case/bld/CDEPS.bldlog.251107-103440
+2025-11-07 10:34:46 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/cime_config/buildlib
+2025-11-07 10:34:48 [INFO/ROOT]          - Building clm library 
+2025-11-07 10:34:48 [INFO/ROOT] Building lnd with output to /cluster/work/users/herfugl/noresm/base_case/bld/lnd.bldlog.251107-103440
+2025-11-07 10:34:50 [INFO/ROOT] clm built in 1.466549 seconds
+2025-11-07 10:34:50 [INFO/ROOT]          - Building atm Library 
+2025-11-07 10:34:50 [INFO/ROOT] Building atm with output to /cluster/work/users/herfugl/noresm/base_case/bld/atm.bldlog.251107-103440
+2025-11-07 10:34:50 [INFO/ROOT]          - Building ice Library 
+2025-11-07 10:34:50 [INFO/ROOT] Building ice with output to /cluster/work/users/herfugl/noresm/base_case/bld/ice.bldlog.251107-103440
+2025-11-07 10:34:50 [INFO/ROOT]          - Building ocn Library 
+2025-11-07 10:34:50 [INFO/ROOT] Building ocn with output to /cluster/work/users/herfugl/noresm/base_case/bld/ocn.bldlog.251107-103440
+2025-11-07 10:34:50 [INFO/ROOT]          - Building rof Library 
+2025-11-07 10:34:50 [INFO/ROOT] Building rof with output to /cluster/work/users/herfugl/noresm/base_case/bld/rof.bldlog.251107-103440
+2025-11-07 10:34:50 [INFO/ROOT]          - Building glc Library 
+2025-11-07 10:34:50 [INFO/ROOT] Building glc with output to /cluster/work/users/herfugl/noresm/base_case/bld/glc.bldlog.251107-103440
+2025-11-07 10:34:51 [INFO/ROOT] dglc built in 1.774487 seconds
+2025-11-07 10:34:52 [INFO/ROOT] mosart built in 1.821038 seconds
+2025-11-07 10:34:52 [INFO/ROOT] cice built in 1.827940 seconds
+2025-11-07 10:34:53 [INFO/ROOT] blom built in 3.729581 seconds
+2025-11-07 10:35:00 [INFO/ROOT] cam built in 10.595232 seconds
+2025-11-07 10:35:00 [INFO/ROOT] Building cesm from /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildexe with output to /cluster/work/users/herfugl/noresm/base_case/bld/cesm.bldlog.251107-103440 
+2025-11-07 10:35:22 [INFO/ROOT] Total build time: 42.285964 seconds
+2025-11-07 10:35:22 [INFO/ROOT] MODEL BUILD HAS FINISHED SUCCESSFULLY
+2025-11-07 10:35:23 [INFO/ROOT] >> Ensemble 4 of 5 created successfully.
+2025-11-07 10:35:23 [INFO/ROOT]  Successfully created new case ensemble_member.005 from clone case base_case 
+2025-11-07 10:35:27 [INFO/ROOT] Setting resource.RLIMIT_STACK to -1 from (-1, -1)
+2025-11-07 10:35:27 [INFO/ROOT] job is case.run USER_REQUESTED_WALLTIME None USER_REQUESTED_QUEUE None WALLTIME_FORMAT %H:%M:%S
+2025-11-07 10:35:27 [INFO/ROOT] Creating batch scripts
+2025-11-07 10:35:27 [INFO/ROOT] Writing case.run script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.case.run
+2025-11-07 10:35:27 [INFO/ROOT] Creating file .case.run
+2025-11-07 10:35:28 [INFO/ROOT] Writing case.st_archive script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.st_archive
+2025-11-07 10:35:28 [INFO/ROOT] Creating file case.st_archive
+2025-11-07 10:35:28 [INFO/ROOT] Writing case.compress script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.compress
+2025-11-07 10:35:28 [INFO/ROOT] Creating file case.compress
+2025-11-07 10:35:28 [INFO/ROOT] Writing case.cupid script from input template /cluster/projects/nn9560k/herfugl/NorESM3/ccs_config/machines/template.cupid
+2025-11-07 10:35:28 [INFO/ROOT] Creating file case.cupid
+2025-11-07 10:35:28 [INFO/ROOT] Running cam.case_setup.py
+2025-11-07 10:35:28 [INFO/ROOT] If an old case build already exists, might want to run 'case.build --clean' before building
+2025-11-07 10:35:29 [INFO/ROOT] You can now run './preview_run' to get more info on how your case will be run
+2025-11-07 10:35:31 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:35:31 [INFO/ROOT]   2025-11-07 10:35:31 atm 
+2025-11-07 10:35:31 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:35:31 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:35:32 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.005/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.005/atm_in 
+2025-11-07 10:35:32 [INFO/ROOT]   2025-11-07 10:35:32 lnd 
+2025-11-07 10:35:32 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:35:32 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:35:32 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:35:32 [INFO/ROOT]   2025-11-07 10:35:32 ice 
+2025-11-07 10:35:32 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:35:32 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:35:32 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.005
+2025-11-07 10:35:32 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:35:32 [INFO/ROOT]   2025-11-07 10:35:32 ocn 
+2025-11-07 10:35:32 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:35:32 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:35:33 [INFO/ROOT]   2025-11-07 10:35:33 rof 
+2025-11-07 10:35:33 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:35:33 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:35:33 [INFO/ROOT]   2025-11-07 10:35:33 glc 
+2025-11-07 10:35:33 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:35:33 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:35:33 [INFO/ROOT]   2025-11-07 10:35:33 wav 
+2025-11-07 10:35:33 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:35:33 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:35:33 [INFO/ROOT]   2025-11-07 10:35:33 esp 
+2025-11-07 10:35:33 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:35:33 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:35:33 [INFO/ROOT]   2025-11-07 10:35:33 cpl 
+2025-11-07 10:35:33 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:35:33 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:35:33 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:35:34 [INFO/ROOT] Building case in directory /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.005
+2025-11-07 10:35:34 [INFO/ROOT] sharedlib_only is False
+2025-11-07 10:35:34 [INFO/ROOT] model_only is False
+2025-11-07 10:35:34 [INFO/ROOT] Generating component namelists as part of build
+2025-11-07 10:35:34 [INFO/ROOT] GET_REFCASE is false, the user is expected to stage the refcase to the run directory.
+2025-11-07 10:35:34 [INFO/ROOT]   2025-11-07 10:35:34 atm 
+2025-11-07 10:35:34 [INFO/ROOT] Create namelist for component cam
+2025-11-07 10:35:34 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cam//cime_config/buildnml
+2025-11-07 10:35:34 [INFO/ROOT] CAM namelist copy: file1 /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.005/Buildconf/camconf/atm_in file2 /cluster/work/users/herfugl/noresm/base_case/run.005/atm_in 
+2025-11-07 10:35:34 [INFO/ROOT]   2025-11-07 10:35:34 lnd 
+2025-11-07 10:35:34 [INFO/ROOT] Create namelist for component clm
+2025-11-07 10:35:34 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/clm//cime_config/buildnml
+2025-11-07 10:35:34 [WARNING/ROOT] WARNING: Could NOT find a start file named n1850.ne16pg3_tn14.ppe_base_run.noresm3_b04._20251106.clm2.r.0351-04-01-00000.nc
+2025-11-07 10:35:34 [INFO/ROOT]   2025-11-07 10:35:34 ice 
+2025-11-07 10:35:34 [INFO/ROOT] Create namelist for component cice
+2025-11-07 10:35:34 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice//cime_config/buildnml
+2025-11-07 10:35:34 [INFO/ROOT] RUN: /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cice/bld/generate_cice_decomp.pl -ccsmroot /cluster/projects/nn9560k/herfugl/NorESM3/cime/.. -res tnx1v4 -nx 360 -ny 384 -nproc 768 -thrds 1 -output all 
+FROM: /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.005
+2025-11-07 10:35:34 [INFO/ROOT]   output: 360 384 6 6 5 sectrobin square-ice
+
+2025-11-07 10:35:35 [INFO/ROOT]   2025-11-07 10:35:35 ocn 
+2025-11-07 10:35:35 [INFO/ROOT] Create namelist for component blom
+2025-11-07 10:35:35 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/blom//cime_config/buildnml
+2025-11-07 10:35:35 [INFO/ROOT]   2025-11-07 10:35:35 rof 
+2025-11-07 10:35:35 [INFO/ROOT] Create namelist for component mosart
+2025-11-07 10:35:35 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/mosart//cime_config/buildnml
+2025-11-07 10:35:35 [INFO/ROOT]   2025-11-07 10:35:35 glc 
+2025-11-07 10:35:35 [INFO/ROOT] Create namelist for component dglc
+2025-11-07 10:35:35 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/dglc/cime_config/buildnml
+2025-11-07 10:35:35 [INFO/ROOT]   2025-11-07 10:35:35 wav 
+2025-11-07 10:35:35 [INFO/ROOT] Create namelist for component swav
+2025-11-07 10:35:35 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/swav/cime_config/buildnml
+2025-11-07 10:35:35 [INFO/ROOT]   2025-11-07 10:35:35 esp 
+2025-11-07 10:35:35 [INFO/ROOT] Create namelist for component sesp
+2025-11-07 10:35:35 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/non_py/src/components/stub_comps_nuopc/sesp/cime_config/buildnml
+2025-11-07 10:35:35 [INFO/ROOT]   2025-11-07 10:35:35 cpl 
+2025-11-07 10:35:35 [INFO/ROOT] Create namelist for component drv
+2025-11-07 10:35:35 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildnml
+2025-11-07 10:35:35 [INFO/ROOT] Writing nuopc_runconfig for components ['CPL', 'ATM', 'LND', 'ICE', 'OCN', 'ROF', 'GLC']
+2025-11-07 10:35:38 [INFO/ROOT] Building gptl with output to file /cluster/work/users/herfugl/noresm/base_case/bld/gptl.bldlog.251107-103534
+2025-11-07 10:35:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.gptl
+2025-11-07 10:35:38 [INFO/ROOT] Building pio with output to file /cluster/work/users/herfugl/noresm/base_case/bld/pio.bldlog.251107-103534
+2025-11-07 10:35:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/CIME/build_scripts/buildlib.pio
+2025-11-07 10:35:38 [INFO/ROOT] Building csm_share with output to file /cluster/work/users/herfugl/noresm/base_case/bld/csm_share.bldlog.251107-103534
+2025-11-07 10:35:38 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../share/buildlib.csm_share
+2025-11-07 10:35:40 [INFO/ROOT] Building CDEPS with output to file /cluster/work/users/herfugl/noresm/base_case/bld/CDEPS.bldlog.251107-103534
+2025-11-07 10:35:40 [INFO/ROOT]    Calling /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cdeps/cime_config/buildlib
+2025-11-07 10:35:42 [INFO/ROOT]          - Building clm library 
+2025-11-07 10:35:42 [INFO/ROOT] Building lnd with output to /cluster/work/users/herfugl/noresm/base_case/bld/lnd.bldlog.251107-103534
+2025-11-07 10:35:44 [INFO/ROOT] clm built in 1.670232 seconds
+2025-11-07 10:35:44 [INFO/ROOT]          - Building atm Library 
+2025-11-07 10:35:44 [INFO/ROOT] Building atm with output to /cluster/work/users/herfugl/noresm/base_case/bld/atm.bldlog.251107-103534
+2025-11-07 10:35:44 [INFO/ROOT]          - Building ice Library 
+2025-11-07 10:35:44 [INFO/ROOT] Building ice with output to /cluster/work/users/herfugl/noresm/base_case/bld/ice.bldlog.251107-103534
+2025-11-07 10:35:44 [INFO/ROOT]          - Building ocn Library 
+2025-11-07 10:35:44 [INFO/ROOT] Building ocn with output to /cluster/work/users/herfugl/noresm/base_case/bld/ocn.bldlog.251107-103534
+2025-11-07 10:35:44 [INFO/ROOT]          - Building rof Library 
+2025-11-07 10:35:44 [INFO/ROOT] Building rof with output to /cluster/work/users/herfugl/noresm/base_case/bld/rof.bldlog.251107-103534
+2025-11-07 10:35:44 [INFO/ROOT]          - Building glc Library 
+2025-11-07 10:35:44 [INFO/ROOT] Building glc with output to /cluster/work/users/herfugl/noresm/base_case/bld/glc.bldlog.251107-103534
+2025-11-07 10:35:46 [INFO/ROOT] dglc built in 1.749536 seconds
+2025-11-07 10:35:46 [INFO/ROOT] mosart built in 1.857550 seconds
+2025-11-07 10:35:46 [INFO/ROOT] cice built in 1.934882 seconds
+2025-11-07 10:35:48 [INFO/ROOT] blom built in 3.667349 seconds
+2025-11-07 10:35:58 [INFO/ROOT] cam built in 13.874985 seconds
+2025-11-07 10:35:58 [INFO/ROOT] Building cesm from /cluster/projects/nn9560k/herfugl/NorESM3/cime/../components/cmeps/cime_config/buildexe with output to /cluster/work/users/herfugl/noresm/base_case/bld/cesm.bldlog.251107-103534 
+2025-11-07 10:36:16 [INFO/ROOT] Total build time: 42.007114 seconds
+2025-11-07 10:36:16 [INFO/ROOT] MODEL BUILD HAS FINISHED SUCCESSFULLY
+2025-11-07 10:36:16 [INFO/ROOT] >> Ensemble 5 of 5 created successfully.

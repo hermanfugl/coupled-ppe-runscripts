@@ -1,0 +1,65 @@
+2025-11-07 10:29:46 [INFO_DETAILED/Tinkertool_log] tinkertool_log logger set up
+2025-11-07 10:29:46 [INFO_DETAILED/Tinkertool_log] Building with config: Instance of dataclass 'BuildPPEConfig':
+  verbose              = 2 (<class 'int'>) | Increase verbosity level (0: WARNING, 1: INFO, 2: INFO_DETAILED, 3: DEBUG)
+  log_dir              = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/output_files/logs') (pathlib.Path | str) | Path to the log directory where logs will be written. If not specified, logs will be printed in current work directory.
+  log_mode             = 'w' (<class 'str'>) | Mode for opening the log file ('w' for write, 'a' for append)
+  simulation_setup_path = PosixPath('/cluster/projects/nn9560k/herfugl/cases-coupled_ppe/run_scripts/input_files/simulation_setup.ini') (<class 'pathlib.Path'>) | Path to user defined configuration file for simulation setup.
+  build_base_only      = False (<class 'bool'>) | Only build the base case - not PPE members
+  build_only           = None (<class 'NoneType'>) | Not used in BuildPPEConfig
+  clone_only_during_build = True (<class 'bool'>) | Only clone the base case and not build the PPE members. This is useful if you have already built the base_case.
+  keepexe              = False (<class 'bool'>) | Reuse the executable for the base case instead of building a new one for each member
+  overwrite            = True (<class 'bool'>) | Overwrite existing cases if they exist
+2025-11-07 10:29:46 [INFO_DETAILED/Tinkertool_log] Building ensemble 0 of 6
+2025-11-07 10:29:46 [INFO/Tinkertool_log] >>> CLONING BASE CASE for member 000...
+2025-11-07 10:29:49 [INFO/Tinkertool_log] >> Building clone case 000...
+2025-11-07 10:29:49 [INFO/Tinkertool_log] ...Casename is ensemble_member.000
+2025-11-07 10:29:49 [INFO/Tinkertool_log] ...Caseroot is /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.000
+2025-11-07 10:29:49 [INFO/Tinkertool_log] ...Rundir is /cluster/work/users/herfugl/noresm/base_case/run.000
+2025-11-07 10:29:49 [INFO/Tinkertool_log] >> Clone 000 case_setup
+2025-11-07 10:29:59 [INFO/Tinkertool_log] >> Clone 000 create_namelists
+2025-11-07 10:30:04 [INFO/Tinkertool_log] >> Clone 000 build
+2025-11-07 10:31:11 [INFO_DETAILED/Tinkertool_log] Building ensemble 1 of 6
+2025-11-07 10:31:11 [INFO/Tinkertool_log] >>> CLONING BASE CASE for member 001...
+2025-11-07 10:31:13 [INFO/Tinkertool_log] >> Building clone case 001...
+2025-11-07 10:31:13 [INFO/Tinkertool_log] ...Casename is ensemble_member.001
+2025-11-07 10:31:13 [INFO/Tinkertool_log] ...Caseroot is /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.001
+2025-11-07 10:31:13 [INFO/Tinkertool_log] ...Rundir is /cluster/work/users/herfugl/noresm/base_case/run.001
+2025-11-07 10:31:13 [INFO/Tinkertool_log] >> Clone 001 case_setup
+2025-11-07 10:31:22 [INFO/Tinkertool_log] >> Clone 001 create_namelists
+2025-11-07 10:31:26 [INFO/Tinkertool_log] >> Clone 001 build
+2025-11-07 10:32:25 [INFO_DETAILED/Tinkertool_log] Building ensemble 2 of 6
+2025-11-07 10:32:25 [INFO/Tinkertool_log] >>> CLONING BASE CASE for member 002...
+2025-11-07 10:32:27 [INFO/Tinkertool_log] >> Building clone case 002...
+2025-11-07 10:32:27 [INFO/Tinkertool_log] ...Casename is ensemble_member.002
+2025-11-07 10:32:27 [INFO/Tinkertool_log] ...Caseroot is /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.002
+2025-11-07 10:32:27 [INFO/Tinkertool_log] ...Rundir is /cluster/work/users/herfugl/noresm/base_case/run.002
+2025-11-07 10:32:27 [INFO/Tinkertool_log] >> Clone 002 case_setup
+2025-11-07 10:32:37 [INFO/Tinkertool_log] >> Clone 002 create_namelists
+2025-11-07 10:32:39 [INFO/Tinkertool_log] >> Clone 002 build
+2025-11-07 10:33:28 [INFO_DETAILED/Tinkertool_log] Building ensemble 3 of 6
+2025-11-07 10:33:28 [INFO/Tinkertool_log] >>> CLONING BASE CASE for member 003...
+2025-11-07 10:33:29 [INFO/Tinkertool_log] >> Building clone case 003...
+2025-11-07 10:33:29 [INFO/Tinkertool_log] ...Casename is ensemble_member.003
+2025-11-07 10:33:29 [INFO/Tinkertool_log] ...Caseroot is /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.003
+2025-11-07 10:33:29 [INFO/Tinkertool_log] ...Rundir is /cluster/work/users/herfugl/noresm/base_case/run.003
+2025-11-07 10:33:29 [INFO/Tinkertool_log] >> Clone 003 case_setup
+2025-11-07 10:33:37 [INFO/Tinkertool_log] >> Clone 003 create_namelists
+2025-11-07 10:33:39 [INFO/Tinkertool_log] >> Clone 003 build
+2025-11-07 10:34:27 [INFO_DETAILED/Tinkertool_log] Building ensemble 4 of 6
+2025-11-07 10:34:27 [INFO/Tinkertool_log] >>> CLONING BASE CASE for member 004...
+2025-11-07 10:34:28 [INFO/Tinkertool_log] >> Building clone case 004...
+2025-11-07 10:34:28 [INFO/Tinkertool_log] ...Casename is ensemble_member.004
+2025-11-07 10:34:28 [INFO/Tinkertool_log] ...Caseroot is /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.004
+2025-11-07 10:34:28 [INFO/Tinkertool_log] ...Rundir is /cluster/work/users/herfugl/noresm/base_case/run.004
+2025-11-07 10:34:28 [INFO/Tinkertool_log] >> Clone 004 case_setup
+2025-11-07 10:34:36 [INFO/Tinkertool_log] >> Clone 004 create_namelists
+2025-11-07 10:34:39 [INFO/Tinkertool_log] >> Clone 004 build
+2025-11-07 10:35:23 [INFO_DETAILED/Tinkertool_log] Building ensemble 5 of 6
+2025-11-07 10:35:23 [INFO/Tinkertool_log] >>> CLONING BASE CASE for member 005...
+2025-11-07 10:35:23 [INFO/Tinkertool_log] >> Building clone case 005...
+2025-11-07 10:35:23 [INFO/Tinkertool_log] ...Casename is ensemble_member.005
+2025-11-07 10:35:23 [INFO/Tinkertool_log] ...Caseroot is /cluster/projects/nn9560k/herfugl/cases-coupled_ppe/ensemble_member.005
+2025-11-07 10:35:23 [INFO/Tinkertool_log] ...Rundir is /cluster/work/users/herfugl/noresm/base_case/run.005
+2025-11-07 10:35:23 [INFO/Tinkertool_log] >> Clone 005 case_setup
+2025-11-07 10:35:31 [INFO/Tinkertool_log] >> Clone 005 create_namelists
+2025-11-07 10:35:33 [INFO/Tinkertool_log] >> Clone 005 build
