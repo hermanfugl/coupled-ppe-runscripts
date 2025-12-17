@@ -10,11 +10,11 @@ os.chdir(script_dir)
 
 #%%
 # --- define input and output files ---
-input_csv_file = script_dir.joinpath('input_files', 'NorESM3_tuningparameterinfo_PPE_cleaned.csv').resolve()
+input_csv_file = script_dir.joinpath('input_files', 'new_ppe_noresm3_tuningparameterinfo.csv').resolve()
 if not input_csv_file.is_file():
     raise FileNotFoundError(f"Input CSV file '{input_csv_file}' not found.")
 
-output_ini_file = script_dir.joinpath('input_files', 'NorESM3_tuningparameterinfo_PPE.ini').resolve()
+output_ini_file = script_dir.joinpath('input_files', 'new_ppe_noresm3_tuningparameterinfo.ini').resolve()
 
 if output_ini_file.exists():
     print(f"Warning: Output INI file '{output_ini_file}' already exists and will be overwritten.")
