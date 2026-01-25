@@ -7,7 +7,8 @@ script_dir = Path(__file__).parent
 
 #collect all paths
 cases = []
-cases_dir = script_dir.parent
+# cases_dir = script_dir.parent
+cases_dir = (script_dir / ".." / ".." / "cases-mini_ppe").resolve()
 for case in cases_dir.iterdir():
     if case.is_dir():
         if 'ensemble_member' in case.name:
