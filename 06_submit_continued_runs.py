@@ -5,12 +5,16 @@ from tinkertool.scripts.create_ppe.create_ppe import submit_ppe
 
 script_dir = Path(__file__).parent
 
-# Subset of ensemble member IDs to continue
-member_ids = {0, 3, 5, 9, 19, 21, 24, 30, 32, 39, 41, 42, 48, 49, 58, 59, 64, 65, 69, 72, 73}
+# Specify the subset of ensemble member IDs
+# member_ids = {5, 7, 11, 17, 19, 27, 31, 33, 36, 38, 40, 41, 53}
+# complement = sorted(set(range(1, 61)) - member_ids)
+
+member_ids = {1, 22, 29, 37, 39, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54, 55, 56, 57, 58, 59, 60}
 wanted_names = {f"ensemble_member.{i:03d}" for i in member_ids}
 
 # Collect existing directories
-cases_dir = script_dir.parent
+# cases_dir = script_dir.parent
+cases_dir = (script_dir / ".." / ".." / "cases-mini_ppe").resolve()
 existing_dirs = [p for p in cases_dir.iterdir() if p.is_dir()]
 found_names = {p.name for p in existing_dirs}
 
